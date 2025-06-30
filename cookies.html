@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie Policy | Vinebud Gardening Services</title>
+    <style>
+        /* Reusing the same styles as index.html */
+        :root {
+            --primary-color: #4a934a;
+            --secondary-color: #2c5e2c;
+            --accent-color: #f8c537;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --text-color: #444;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .content-block {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-bottom: 40px;
+        }
+        
+        .content-block h3 {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            font-size: 1.8rem;
+        }
+        
+        .content-block h4 {
+            color: var(--primary-color);
+            margin: 25px 0 15px;
+            font-size: 1.4rem;
+        }
+        
+        .content-block p {
+            margin-bottom: 15px;
+        }
+        
+        .content-block ul {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .content-block li {
+            margin-bottom: 10px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+        
+        .cookie-consent p {
+            margin-right: 20px;
+            flex-grow: 1;
+        }
+        
+        .cookie-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .cookie-btn {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .cookie-accept {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .cookie-decline {
+            background-color: #666;
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .content-block {
+                padding: 30px 20px;
+            }
+            
+            .cookie-consent {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .cookie-buttons {
+                margin-top: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L30 50 L70 50 Z" fill="#4a934a"/>
+                    <path d="M30 50 Q50 70 70 50" stroke="#4a934a" stroke-width="8" fill="none"/>
+                    <path d="M70 50 Q90 30 100 60" stroke="#4a934a" stroke-width="5" fill="none"/>
+                </svg>
+                <div class="logo-text">Vine<span>bud</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <section class="section">
+            <div class="section-title">
+                <h2>Cookie Policy</h2>
+                <p>Last Updated: June 1, 2023</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>Introduction</h3>
+                <p>Welcome to Vinebud Gardening Services' Cookie Policy. This policy explains how we use cookies and similar tracking technologies when you visit our website (www.vinebud.com) or use our services. By using our website, you consent to the use of cookies in accordance with this policy.</p>
+                <p>Cookies are small text files that are placed on your computer or mobile device when you visit a website. They are widely used to make websites work more efficiently, as well as to provide information to the website owners. This policy provides detailed information about the types of cookies we use, their purposes, and how you can control them.</p>
+                <p>We may update this Cookie Policy from time to time to reflect changes in technology, legislation, or our data use practices. We encourage you to check this page periodically for the latest information about our use of cookies.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>What Are Cookies?</h3>
+                <p>Cookies are small text files containing a string of characters that can be placed on your computer or mobile device that uniquely identify your browser or device. They are not harmful and cannot introduce viruses or extract personal contact information. Cookies serve various purposes, such as enabling certain website features, remembering your preferences, and providing analytics.</p>
+                <p>There are several types of cookies that may be used on our website:</p>
+                <ul>
+                    <li><strong>Session cookies</strong> - Temporary cookies that remain in your browser until you leave the website</li>
+                    <li><strong>Persistent cookies</strong> - Remain in your browser for a set period of time or until you delete them</li>
+                    <li><strong>First-party cookies</strong> - Set by the website you're visiting</li>
+                    <li><strong>Third-party cookies</strong> - Set by a third party (like Google Analytics)</li>
+                    <li><strong>Essential cookies</strong> - Necessary for the website to function properly</li>
+                    <li><strong>Performance cookies</strong> - Collect information about how visitors use the website</li>
+                    <li><strong>Functionality cookies</strong> - Allow the website to remember choices you make</li>
+                    <li><strong>Targeting cookies</strong> - Used to deliver content more relevant to you</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>How We Use Cookies</h3>
+                <p>Vinebud Gardening Services uses cookies for several important purposes:</p>
+                
+                <h4>Essential Website Operation</h4>
+                <p>These cookies are strictly necessary to provide you with services available through our website and to use some of its features, such as access to secure areas. Without these cookies, services you have asked for cannot be provided. We use these cookies to enable core website functionality, including page navigation and access to secure areas of the website. For example, they allow you to log in to secure areas of our site or maintain your session as you move between pages.</p>
+                <p>Essential cookies also help with load balancing to ensure our website remains available during periods of high traffic. They may also be used for security purposes to prevent fraudulent use of login credentials and to protect our website from cross-site request forgery attacks. These cookies don't collect information that could be used for marketing purposes or remember where you've been on the internet.</p>
+                
+                <h4>Performance and Analytics</h4>
+                <p>These cookies collect information about how visitors use our website, for instance which pages visitors go to most often, and if they get error messages from web pages. These cookies don't collect information that identifies a visitor. All information these cookies collect is aggregated and therefore anonymous. It is only used to improve how our website works.</p>
+                <p>We use Google Analytics cookies to understand how our visitors engage with our site. These cookies help us know how many people visit our site, how they found us, and how they interact with our content. The data includes the number of visitors to our website, the websites that referred them to our website, the pages they visited on our website, what time of day they visited, whether they have visited our website before, and other similar information.</p>
+                
+                <h4>Functionality and Personalization</h4>
+                <p>These cookies allow our website to remember choices you make (such as your username, language, or the region you are in) and provide enhanced, more personal features. These cookies can also be used to remember changes you have made to text size, fonts, and other parts of web pages that you can customize.</p>
+                <p>They may also be used to provide services you have asked for such as watching a video or commenting on a blog. The information these cookies collect may be anonymized and they cannot track your browsing activity on other websites. Without these cookies, certain functionality may become unavailable.</p>
+                
+                <h4>Advertising and Targeting</h4>
+                <p>These cookies are used to deliver advertisements more relevant to you and your interests. They are also used to limit the number of times you see an advertisement as well as help measure the effectiveness of the advertising campaign. They remember that you have visited a website and this information is shared with other organizations such as advertisers.</p>
+                <p>We may use these cookies to understand what content or promotions are most relevant to our visitors based on which pages they visit. This helps us display advertising on other websites based on your interests. These cookies may be set through our site by our advertising partners to build a profile of your interests and show you relevant ads on other sites.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>Detailed List of Cookies We Use</h3>
+                <p>Below is a comprehensive list of the cookies we use on our website, along with their purpose and duration:</p>
+                
+                <h4>Essential Cookies</h4>
+                <ul>
+                    <li><strong>vinebud_session</strong> - Maintains your session state across page requests (Duration: Session)</li>
+                    <li><strong>XSRF-TOKEN</strong> - Security cookie to prevent cross-site request forgery attacks (Duration: Session)</li>
+                    <li><strong>cookie_consent</strong> - Remembers your cookie preferences (Duration: 1 year)</li>
+                    <li><strong>site_availability</strong> - Used for load balancing to ensure website availability (Duration: Session)</li>
+                    <li><strong>secure_login</strong> - Used for secure login functionality (Duration: Session)</li>
+                </ul>
+                
+                <h4>Performance Cookies</h4>
+                <ul>
+                    <li><strong>_ga</strong> - Google Analytics cookie used to distinguish users (Duration: 2 years)</li>
+                    <li><strong>_gid</strong> - Google Analytics cookie used to distinguish users (Duration: 24 hours)</li>
+                    <li><strong>_gat</strong> - Google Analytics cookie used to throttle request rate (Duration: 1 minute)</li>
+                    <li><strong>_ga_[container-id]</strong> - Used to persist session state (Duration: 2 years)</li>
+                    <li><strong>amplitude_id</strong> - Used for website analytics to track user behavior (Duration: 10 years)</li>
+                </ul>
+                
+                <h4>Functionality Cookies</h4>
+                <ul>
+                    <li><strong>language</strong> - Remembers your preferred language (Duration: 1 year)</li>
+                    <li><strong>font_size</strong> - Remembers your preferred font size (Duration: 1 year)</li>
+                    <li><strong>region</strong> - Stores your geographic region for localized content (Duration: 1 month)</li>
+                    <li><strong>recent_pages</strong> - Tracks recently viewed pages for quick navigation (Duration: 30 days)</li>
+                    <li><strong>video_preferences</strong> - Stores your video playback preferences (Duration: Session)</li>
+                </ul>
+                
+                <h4>Advertising Cookies</h4>
+                <ul>
+                    <li><strong>_fbp</strong> - Facebook Pixel cookie used for advertising (Duration: 3 months)</li>
+                    <li><strong>fr</strong> - Facebook Pixel cookie used for advertising (Duration: 3 months)</li>
+                    <li><strong>NID</strong> - Google Ads cookie for ad personalization (Duration: 6 months)</li>
+                    <li><strong>IDE</strong> - Google DoubleClick cookie for advertising (Duration: 1 year)</li>
+                    <li><strong>personalization_id</strong> - Twitter cookie for ad personalization (Duration: 2 years)</li>
+                </ul>
+            </div>
+            
+            <div class="content-block">
+                <h3>Third-Party Cookies</h3>
+                <p>In addition to our own cookies, we may also use various third-party cookies to report usage statistics of the website, deliver advertisements on and through the website, and so on. These third-party services may set their own cookies to facilitate the services they are providing.</p>
+                
+                <h4>Google Analytics</h4>
+                <p>We use Google Analytics to analyze the use of our website. Google Analytics gathers information about website use by means of cookies. The information gathered is used to create reports about the use of our website. Google's privacy policy is available at: https://policies.google.com/privacy. The cookies used by Google Analytics include _ga, _gid, and _gat.</p>
+                <p>Google Analytics helps us understand how visitors engage with our site. It collects information anonymously, reporting website trends without identifying individual visitors. We use this data to improve our website's content, navigation, and overall user experience. You can opt out of Google Analytics without affecting how you visit our site by installing the Google Analytics opt-out browser add-on.</p>
+                
+                <h4>Facebook Pixel</h4>
+                <p>We use Facebook Pixel to measure the effectiveness of our advertising and to show you ads that are more relevant to you. The Facebook Pixel is a piece of code that allows us to track visitor activity on our website after they click on a Facebook ad. This helps us understand and improve our ad campaigns.</p>
+                <p>The data collected through the Facebook Pixel is anonymous to us, meaning we cannot see the personal data of individual users. However, this data is stored and processed by Facebook, which may link this information to your Facebook account and use it for their own advertising purposes, in accordance with Facebook's Data Use Policy.</p>
+                
+                <h4>YouTube Cookies</h4>
+                <p>We may embed videos from our official YouTube channel using YouTube's privacy-enhanced mode. This mode may set cookies on your computer once you click on the YouTube video player, but YouTube will not store personally-identifiable cookie information for playbacks of embedded videos using the privacy-enhanced mode.</p>
+                <p>These cookies may include PREF, VISITOR_INFO1_LIVE, and YSC, which help YouTube count views, remember preferences, and serve personalized content. YouTube's privacy policy is available at: https://policies.google.com/privacy. You can manage these cookies through your browser settings or YouTube's privacy settings.</p>
+                
+                <h4>Other Third-Party Services</h4>
+                <p>We may also use other third-party services that set cookies, including but not limited to:</p>
+                <ul>
+                    <li>Hotjar for user behavior analytics</li>
+                    <li>Mailchimp for email subscription services</li>
+                    <li>AddThis for social sharing functionality</li>
+                    <li>Stripe for payment processing</li>
+                    <li>Zendesk for customer support chat</li>
+                </ul>
+                <p>Each of these services has its own privacy policy and cookie usage guidelines. We recommend reviewing these policies to understand how your data is being used.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>Managing Your Cookie Preferences</h3>
+                <p>You have several options to control or limit how we and our partners use cookies:</p>
+                
+                <h4>Browser Controls</h4>
+                <p>Most web browsers allow some control of most cookies through the browser settings. You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of our website may become inaccessible or not function properly.</p>
+                <p>To find out more about cookies, including how to see what cookies have been set and how to manage and delete them, visit www.aboutcookies.org or www.allaboutcookies.org. These guides will walk you through the steps for various browsers.</p>
+                
+                <h4>Opt-Out Tools</h4>
+                <p>The Digital Advertising Alliance offers tools to opt out of interest-based advertising from participating companies (http://optout.aboutads.info). For users in the European Union, the EDAA provides a similar tool at www.youronlinechoices.eu.</p>
+                <p>For Google Analytics specifically, you can install the Google Analytics Opt-out Browser Add-on (https://tools.google.com/dlpage/gaoptout) to prevent your data from being used by Google Analytics.</p>
+                
+                <h4>Device Settings</h4>
+                <p>For mobile devices, you can often limit ad tracking or reset the advertising identifier through your device settings. On iOS devices, look for "Limit Ad Tracking" in Settings > Privacy > Advertising. On Android devices, look for "Opt out of Ads Personalization" in Settings > Google > Ads.</p>
+                <p>These settings won't stop all ads, but they will make the ads you see less targeted to your interests. Note that these settings may vary by device manufacturer and software version.</p>
+                
+                <h4>Our Cookie Consent Tool</h4>
+                <p>When you first visit our website, you'll see our cookie consent banner that allows you to accept or decline non-essential cookies. You can change your preferences at any time by clicking the "Cookie Settings" link in our website footer.</p>
+                <p>The tool allows you to selectively enable or disable different categories of cookies (essential, performance, functionality, and advertising). Essential cookies cannot be disabled as they are necessary for basic website functionality.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>Changes to This Cookie Policy</h3>
+                <p>We may update this Cookie Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we do, we will update the "Last Updated" date at the top of this policy. If we make material changes that affect your rights, we will provide additional notice, such as via email or through our website.</p>
+                <p>We encourage you to periodically review this Cookie Policy to stay informed about our use of cookies and related technologies. Your continued use of our website after any changes to this Cookie Policy constitutes your acceptance of the updated policy.</p>
+                <p>If you disagree with any changes to this policy, you will need to stop using our website and delete any cookies that have been set. You can manage cookies through your browser settings as described above.</p>
+            </div>
+            
+            <div class="content-block">
+                <h3>Contact Us</h3>
+                <p>If you have any questions about our use of cookies or this Cookie Policy, please contact us:</p>
+                <ul>
+                    <li><strong>By email:</strong> privacy@vinebud.com</li>
+                    <li><strong>By mail:</strong> Vinebud Gardening Services, 239 Greene St, New York, NY 10003, Attn: Privacy Officer</li>
+                    <li><strong>By phone:</strong> (212) 555-0198 (ask for the Privacy Officer)</li>
+                </ul>
+                <p>We will respond to your inquiry within 30 days of receipt. For privacy-related requests, we may need to verify your identity before processing your request.</p>
+                <p>If you are not satisfied with our response, you may have the right to lodge a complaint with the relevant data protection authority in your jurisdiction.</p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Vinebud</h3>
+                    <p>Cultivating beautiful, sustainable green spaces in New York City since 2015.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>239 Greene St, New York, NY 10003</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(212) 555-0198</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Landscape Design</a></li>
+                        <li><a href="index.html#services">Garden Maintenance</a></li>
+                        <li><a href="index.html#services">Irrigation Systems</a></li>
+                        <li><a href="index.html#services">Seasonal Planting</a></li>
+                        <li><a href="index.html#services">Tree Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#tips">Gardening Tips</a></li>
+                        <li><a href="#">Plant Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vinebud Gardening Services. All Rights Reserved. | 239 Greene St, New York, NY 10003, USA | Phone: (212) 555-0198</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-consent" id="cookieConsent">
+        <p>We use cookies to enhance your browsing experience, serve personalized content, and analyze our traffic. By clicking "Accept All", you consent to our use of cookies. You can manage your preferences in Cookie Settings.</p>
+        <div class="cookie-buttons">
+            <button class="cookie-btn cookie-accept" id="acceptAll">Accept All</button>
+            <button class="cookie-btn cookie-decline" id="declineAll">Decline All</button>
+            <button class="cookie-btn" id="cookieSettings">Cookie Settings</button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Cookie consent functionality
+        const cookieConsent = document.getElementById('cookieConsent');
+        const acceptAllBtn = document.getElementById('acceptAll');
+        const declineAllBtn = document.getElementById('declineAll');
+        const cookieSettingsBtn = document.getElementById('cookieSettings');
+        
+        // Check if user has already made a choice
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieConsent.style.display = 'flex';
+        } else {
+            cookieConsent.style.display = 'none';
+        }
+        
+        // Handle accept all
+        acceptAllBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'all');
+            cookieConsent.style.display = 'none';
+            // Here you would typically load all cookies
+            console.log('All cookies accepted');
+        });
+        
+        // Handle decline all
+        declineAllBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'none');
+            cookieConsent.style.display = 'none';
+            // Here you would typically block all non-essential cookies
+            console.log('All cookies declined');
+        });
+        
+        // Handle cookie settings
+        cookieSettingsBtn.addEventListener('click', function() {
+            // In a real implementation, this would open a modal with granular cookie settings
+            alert('Cookie settings would be shown here. In a real implementation, this would allow granular control over cookie categories.');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                if(this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

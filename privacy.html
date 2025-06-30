@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Vinebud Gardening Services</title>
+    <style>
+        /* Reusing the same styles as index.html */
+        :root {
+            --primary-color: #4a934a;
+            --secondary-color: #2c5e2c;
+            --accent-color: #f8c537;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --text-color: #444;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .privacy-content {
+            background-color: var(--white);
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .privacy-point {
+            margin-bottom: 40px;
+        }
+        
+        .privacy-point h3 {
+            font-size: 1.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .privacy-content {
+                padding: 30px 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L30 50 L70 50 Z" fill="#4a934a"/>
+                    <path d="M30 50 Q50 70 70 50" stroke="#4a934a" stroke-width="8" fill="none"/>
+                    <path d="M70 50 Q90 30 100 60" stroke="#4a934a" stroke-width="5" fill="none"/>
+                </svg>
+                <div class="logo-text">Vine<span>bud</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Privacy Policy Content -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Privacy Policy</h2>
+                <p>Last Updated: June 28, 2023</p>
+            </div>
+            <div class="privacy-content">
+                <div class="privacy-point">
+                    <h3>1. Introduction</h3>
+                    <p>Vinebud Gardening Services ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website vinebud.com or use our services. Please read this privacy policy carefully. By accessing or using our service, you agree to the collection and use of information in accordance with this policy. If you disagree with any part of this policy, you must not access the website or use our services.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>2. Information We Collect</h3>
+                    <p>We collect several types of information from and about users of our website, including: personal identification information (name, email address, phone number), demographic information (zip code, preferences), technical information (IP address, browser type), and usage information (pages visited, time spent). We collect this information directly from you when you provide it to us and automatically as you navigate through the site. Information collected automatically may include usage details, IP addresses, and information collected through cookies and other tracking technologies.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>3. How We Use Your Information</h3>
+                    <p>We use the information we collect to provide, maintain, and improve our services; to process your requests and transactions; to communicate with you about services, offers, and promotions; to personalize your experience; to analyze website usage and improve our content; to prevent fraudulent activities; and to comply with legal obligations. Your information helps us respond more effectively to your service requests and support needs, and enables us to send periodic emails regarding your order or other products and services.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>4. Data Protection Rights</h3>
+                    <p>Under data protection laws, you have rights including: the right to access your personal data; the right to rectification of inaccurate data; the right to erasure of your data; the right to restrict processing; the right to data portability; the right to object to processing; and rights related to automated decision making. We will respond to all legitimate requests within one month. If you would like to exercise any of these rights, please contact us at privacy@vinebud.com with your specific request and proof of identity.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>5. Cookies and Tracking Technologies</h3>
+                    <p>Our website uses cookies and similar tracking technologies to track activity and hold certain information. Cookies are files with small amounts of data which may include an anonymous unique identifier. You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our site. We use both session cookies (which expire when you close your browser) and persistent cookies (which stay on your device until deleted).</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>6. Third-Party Services</h3>
+                    <p>We may employ third-party companies and individuals to facilitate our service, provide services on our behalf, perform service-related services, or assist us in analyzing how our service is used. These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose. These include payment processors, hosting providers, analytics providers, and marketing platforms. We carefully vet all third-party service providers for compliance with data protection standards.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>7. Data Security</h3>
+                    <p>We implement appropriate technical and organizational measures to protect personal data against accidental or unlawful destruction, loss, alteration, unauthorized disclosure or access. Our security measures include encryption of data in transit and at rest, access controls to personal data, regular security testing, and staff training. However, no method of transmission over the Internet or method of electronic storage is 100% secure, so we cannot guarantee absolute security. We will notify you and any applicable regulator of a breach where legally required.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>8. Data Retention</h3>
+                    <p>We will retain your personal information only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use your information to the extent necessary to comply with our legal obligations, resolve disputes, and enforce our policies. Retention periods vary depending on the type of data and purpose for collection. Generally, customer data is retained for seven years after the end of our relationship to comply with tax and accounting requirements, while website analytics data may be retained for shorter periods.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>9. International Data Transfers</h3>
+                    <p>Your information, including personal data, may be transferred to — and maintained on — computers located outside of your state, province, country or other governmental jurisdiction where the data protection laws may differ from those of your jurisdiction. We will ensure that any international transfers of your personal data are subject to appropriate safeguards as required by applicable data protection laws, such as the EU Standard Contractual Clauses or the UK International Data Transfer Agreement. By using our services, you consent to this transfer.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>10. Children's Privacy</h3>
+                    <p>Our services are not directed to individuals under the age of 16. We do not knowingly collect personal information from children under 16. If we become aware that a child under 16 has provided us with personal information, we will take steps to delete such information from our files immediately. Parents or guardians who believe their child has submitted personal data to us and would like to have it deleted should contact us at privacy@vinebud.com. We encourage parents to monitor their children's online activities and teach them about safe internet practices.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>11. Marketing Communications</h3>
+                    <p>We may use your personal information to contact you with newsletters, marketing or promotional materials, and other information that may be of interest to you. You may opt out of receiving any, or all, of these communications from us by following the unsubscribe link or instructions provided in any email we send or by contacting us at unsubscribe@vinebud.com. Even if you opt out of marketing communications, we may still send you non-promotional communications, such as those about your account or our ongoing business relations.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>12. Payment Information</h3>
+                    <p>For paid services, we collect payment information through our secure payment processor. We do not store credit card details directly on our servers. All payment transactions are encrypted using SSL technology and processed by PCI-DSS compliant payment processors. You may be required to provide your payment information directly to the payment processor, whose use of your personal information is governed by their privacy policy. We retain only a tokenized reference to your payment method for billing purposes and do not have access to your full payment details.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>13. User-Generated Content</h3>
+                    <p>If you post comments, reviews, or other content on our website, this information may be collected and stored indefinitely, even if you later request deletion of your account. We may use this content for promotional purposes. By posting content, you grant us a non-exclusive, royalty-free, perpetual, and worldwide license to use, modify, publicly perform, publicly display, reproduce, and distribute such content. You represent that you own or have the necessary rights to any content you post and that it does not violate any laws or third-party rights.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>14. Links to Other Sites</h3>
+                    <p>Our website may contain links to other sites that are not operated by us. If you click on a third-party link, you will be directed to that third party's site. We strongly advise you to review the privacy policy of every site you visit. We have no control over and assume no responsibility for the content, privacy policies, or practices of any third-party sites or services. This includes links contained in advertisements, including banner advertisements and sponsored links that may appear on our website.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>15. Changes to This Policy</h3>
+                    <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date at the top. You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page. Your continued use of our services after any modification to this Privacy Policy will constitute your acknowledgment of the modifications and your consent to abide and be bound by the modified Privacy Policy.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>16. California Privacy Rights</h3>
+                    <p>California residents have specific rights under the California Consumer Privacy Act (CCPA), including the right to request disclosure of data collection and sharing practices, the right to request deletion of personal information, and the right to opt out of the sale of personal information. Vinebud does not sell personal information. To make a request under CCPA, please contact us at privacy@vinebud.com. We will verify your identity before responding to your request and will not discriminate against you for exercising your rights under CCPA.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>17. GDPR Compliance</h3>
+                    <p>For users in the European Economic Area (EEA), we comply with the General Data Protection Regulation (GDPR). This means we process personal data only when we have a lawful basis to do so, which may include your consent, the performance of a contract, compliance with legal obligations, or our legitimate interests. You have the right to withdraw consent at any time where we rely on consent to process your personal data. You also have the right to lodge a complaint with a supervisory authority in your country of residence.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>18. Business Transfers</h3>
+                    <p>If Vinebud is involved in a merger, acquisition, or asset sale, your personal data may be transferred. We will provide notice before your personal data is transferred and becomes subject to a different privacy policy. In such cases, we will require the acquiring entity to honor the commitments made in this Privacy Policy or provide you with the opportunity to opt out of the transfer of your personal data. Notice may be given via email and/or a prominent notice on our website.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>19. Service Providers</h3>
+                    <p>We may employ third-party companies and individuals to facilitate our service ("Service Providers"), provide the service on our behalf, perform service-related services, or assist us in analyzing how our service is used. These third parties have access to your personal data only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose. Our current Service Providers include hosting providers, email service providers, analytics providers, and customer support platforms.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>20. Analytics</h3>
+                    <p>We may use third-party Service Providers to monitor and analyze the use of our service. Google Analytics is a web analytics service offered by Google that tracks and reports website traffic. Google uses the data collected to track and monitor the use of our service. This data is shared with other Google services. Google may use the collected data to contextualize and personalize the ads of its own advertising network. You can opt out of having your activity on the service made available to Google Analytics by installing the Google Analytics opt-out browser add-on.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>21. Advertising</h3>
+                    <p>We may use third-party Service Providers to show advertisements to you to help support and maintain our service. These advertisers may use cookies, web beacons, and other tracking technologies to collect information about your use of our website and other websites in order to provide you with targeted advertisements based on your browsing activities and interests. You can opt out of interest-based advertising by visiting the Digital Advertising Alliance's or Network Advertising Initiative's opt-out pages or by adjusting the advertising preferences in your browser or device settings.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>22. Behavioral Remarketing</h3>
+                    <p>Vinebud may use remarketing services to advertise on third-party websites to you after you visited our service. We and our third-party vendors use cookies to inform, optimize, and serve ads based on your past visits to our service. For instance, Google Ads Remarketing is a remarketing and behavioral targeting service provided by Google that connects the activity of vinebud.com with the Google Ads advertising network and the DoubleClick Cookie. You can opt out of Google Analytics for Display Advertising and customize Google Display Network ads using Google's Ads Settings.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>23. Do Not Track Signals</h3>
+                    <p>We do not currently respond to Do Not Track (DNT) browser signals or mechanisms. Do Not Track is a preference you can set in your web browser to inform websites that you do not want to be tracked. You can enable or disable Do Not Track by visiting the Preferences or Settings page of your web browser. As no uniform technology standard for recognizing and implementing DNT signals has been finalized, we currently do not respond to DNT browser signals or any other mechanism that automatically communicates your choice not to be tracked online.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>24. Data Breach Notification</h3>
+                    <p>In the event of a data breach that affects your personal information, we will notify you and the appropriate authorities as required by applicable law. Our breach notification procedures are designed to comply with all applicable laws, including the GDPR and various U.S. state laws. We will make reasonable efforts to notify affected individuals within 72 hours of becoming aware of the breach, unless the personal data breach is unlikely to result in a risk to your rights and freedoms. Notifications will include the nature of the breach, the categories of data affected, and recommended protective measures.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>25. Data Protection Officer</h3>
+                    <p>Vinebud has appointed a Data Protection Officer (DPO) who is responsible for overseeing questions about this privacy policy. If you have any questions about this Privacy Policy, including any requests to exercise your legal rights, please contact the DPO at dpo@vinebud.com. Our DPO monitors compliance with applicable data protection laws and acts as a point of contact for data subjects and supervisory authorities. The DPO conducts regular audits of our data processing activities and provides staff training on data protection matters.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>26. User Responsibilities</h3>
+                    <p>You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. You agree to immediately notify us of any unauthorized use of your account or any other breach of security. We will not be liable for any loss or damage arising from your failure to comply with this security obligation. You should use particular caution when accessing your account from a public or shared computer so that others are not able to view or record your password or other personal information.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>27. Social Media Features</h3>
+                    <p>Our website may include social media features, such as the Facebook Like button and widgets, such as the Share This button or interactive mini-programs that run on our site. These features may collect your IP address, which page you are visiting on our site, and may set a cookie to enable the feature to function properly. Social media features and widgets are either hosted by a third party or hosted directly on our site. Your interactions with these features are governed by the privacy policy of the company providing it.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>28. Single Sign-On</h3>
+                    <p>You may be able to log in to our site using sign-in services such as Google, Facebook, or Apple. These services will authenticate your identity and provide you the option to share certain personal information with us such as your name and email address to pre-populate our sign-up form. Services like Google and Facebook give you the option to post information about your activities on our website to your profile page to share with others within your network. Your interactions with these features are governed by the privacy policy of the company providing them.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>29. Testimonials</h3>
+                    <p>We may display personal testimonials of satisfied customers on our site in addition to other endorsements. With your consent, we may post your testimonial along with your name. If you wish to update or delete your testimonial, you can contact us at testimonials@vinebud.com. We reserve the right to edit testimonials for clarity or brevity while maintaining the original meaning. Testimonials may be used in various marketing materials, including but not limited to our website, printed materials, and social media channels.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>30. Public Forums</h3>
+                    <p>Our website may offer publicly accessible blogs or community forums. You should be aware that any information you provide in these areas may be read, collected, and used by others who access them. To request removal of your personal information from our blog or community forum, contact us at privacy@vinebud.com. In some cases, we may not be able to remove your personal information, in which case we will let you know if we are unable to do so and why. We recommend avoiding posting sensitive personal information in public forums.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>31. Referral Programs</h3>
+                    <p>If you participate in our referral program, we will ask you for your referral's name and email address. We will automatically send your referral a one-time email inviting them to visit our website. We store this information for the sole purpose of sending this email and tracking the success of our referral program. Your referral may contact us at privacy@vinebud.com to request that we remove this information from our database. Referral program participants are subject to additional terms and conditions.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>32. Surveys & Contests</h3>
+                    <p>From time to time, our site may request information via surveys or contests. Participation in these surveys or contests is completely voluntary and you may choose whether or not to participate and therefore disclose this information. Information requested may include contact information and demographic information. Contact information will be used to notify the winners and award prizes. Survey information will be used for purposes of monitoring or improving the use and satisfaction of our services and website.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>33. Email Policies</h3>
+                    <p>We are committed to keeping your email address confidential. We do not sell, rent, or lease our subscription lists to third parties. We will maintain the information you send via email in accordance with applicable laws. All emails sent by us will clearly state who the email is from and provide clear information on how to contact the sender. In addition, all email messages will contain concise information on how to remove yourself from our mailing list so that you receive no further email communication from us.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>34. SMS/Text Messaging</h3>
+                    <p>If you opt in to receive SMS/text messages from us, we may use your mobile phone number to send you service-related messages, promotional offers, and other communications. Message and data rates may apply. You can opt out of receiving SMS/text messages at any time by replying "STOP" to any message you receive from us. For help, reply "HELP" or contact us at support@vinebud.com. We are not responsible for any delays in the receipt of any SMS messages, as delivery is subject to effective transmission from your network operator.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>35. Push Notifications</h3>
+                    <p>With your consent, we may send push notifications to your mobile device to provide service updates, promotions, and other relevant messages. You can manage push notifications from the settings of the mobile application or your device. Please note that opting out of receiving push notifications may impact your use of certain features of our services. The frequency of push notifications will vary based on your interactions with our services and your notification settings.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>36. Location Data</h3>
+                    <p>If you permit our website or mobile application to access location services through the permission system used by your mobile operating system, we may collect the precise location of your device to provide location-based services. We use this information to provide requested location services, such as finding nearby service providers or offering location-specific content. You can withdraw permission for us to collect this information at any time by changing the settings on your device, though this may affect certain features of our services.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>37. Device Information</h3>
+                    <p>We may collect information about the devices you use to access our services, including hardware models, operating systems and versions, unique device identifiers, browser types, and mobile network information. This information helps us understand how our services are being used and allows us to optimize our services for different devices. We may associate your device identifiers with your Vinebud account for security and fraud prevention purposes, and to provide personalized experiences across devices.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>38. Log Data</h3>
+                    <p>We collect log data when you use our website, which may include information such as your IP address, browser type, Internet Service Provider, pages visited, time and date of visit, time spent on pages, and other statistics. We use this information to administer the site, analyze trends, track user movements, gather demographic information, and improve our services. Log data is typically retained for a limited period unless needed for security investigations or required by law.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>39. Cookies Preferences</h3>
+                    <p>You can set your browser to refuse all or some browser cookies, or to alert you when websites set or access cookies. If you disable or refuse cookies, please note that some parts of our website may become inaccessible or not function properly. For more information about the cookies we use and how to manage your cookie preferences, please visit our Cookie Policy page. Most web browsers allow some control of most cookies through the browser settings, typically found in the "Options" or "Preferences" menu.</p>
+                </div>
+
+                <div class="privacy-point">
+                    <h3>40. Contact Us</h3>
+                    <p>If you have any questions about this Privacy Policy, please contact us by email at privacy@vinebud.com or by mail at Vinebud Gardening Services, 239 Greene St, New York, NY 10003, USA. For general inquiries, you may also call us at (212) 555-0198 during our business hours (Monday-Friday, 9am-5pm EST). We will respond to your privacy-related requests within 30 days. If we need more time, we will inform you of the reason and extension period in writing.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Vinebud</h3>
+                    <p>Cultivating beautiful, sustainable green spaces in New York City since 2015.</p>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>239 Greene St, New York, NY 10003</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>(212) 555-0198</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="index.html#services">Landscape Design</a></li>
+                        <li><a href="index.html#services">Garden Maintenance</a></li>
+                        <li><a href="index.html#services">Irrigation Systems</a></li>
+                        <li><a href="index.html#services">Seasonal Planting</a></li>
+                        <li><a href="index.html#services">Tree Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="index.html#about">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="index.html#testimonials">Testimonials</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="index.html#blog">Blog</a></li>
+                        <li><a href="index.html#tips">Gardening Tips</a></li>
+                        <li><a href="#">Plant Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vinebud Gardening Services. All Rights Reserved. | 239 Greene St, New York, NY 10003, USA | Phone: (212) 555-0198</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if(this.getAttribute('href') !== '#') {
+                    e.preventDefault();
+                    
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

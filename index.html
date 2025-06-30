@@ -1,0 +1,1253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinebud - Cultivating Your Green Spaces</title>
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #4a934a;
+            --secondary-color: #2c5e2c;
+            --accent-color: #f8c537;
+            --light-color: #f5f5f5;
+            --dark-color: #333;
+            --text-color: #444;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-color);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+        
+        .logo-text {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        .logo-text span {
+            color: var(--accent-color);
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--primary-color);
+        }
+        
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('p1.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+        }
+        
+        .btn-accent:hover {
+            background-color: #e6b42e;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .about-text p {
+            margin-bottom: 20px;
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.5s;
+        }
+        
+        .about-image img:hover {
+            transform: scale(1.05);
+        }
+        
+        /* Services Section */
+        .services {
+            background-color: var(--white);
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .service-content p {
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        /* Pricing Table */
+        .pricing-section {
+            background-color: #f9f9f9;
+        }
+        
+        .pricing-table {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .pricing-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.popular::before {
+            content: "Most Popular";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            padding: 5px 15px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border-bottom-left-radius: 10px;
+        }
+        
+        .pricing-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .pricing-card .price {
+            font-size: 2.5rem;
+            margin-bottom: 25px;
+        }
+        
+        .pricing-card .price span {
+            font-size: 1rem;
+            color: var(--text-color);
+        }
+        
+        .pricing-card ul {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-card ul li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Blog Section */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .blog-card {
+            background-color: var(--white);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .blog-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .blog-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .blog-card:hover .blog-image img {
+            transform: scale(1.1);
+        }
+        
+        .blog-content {
+            padding: 25px;
+        }
+        
+        .blog-date {
+            font-size: 0.9rem;
+            color: #777;
+            margin-bottom: 10px;
+        }
+        
+        .blog-content h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .blog-content p {
+            margin-bottom: 20px;
+        }
+        
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s;
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        
+        /* Gardening Tips */
+        .tips-section {
+            background-color: var(--white);
+        }
+        
+        .tips-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .tip-card {
+            background-color: #f9f9f9;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .tip-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+        }
+        
+        .tip-card h3 i {
+            margin-right: 10px;
+            color: var(--primary-color);
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 100px 0;
+        }
+        
+        .testimonials .section-title h2 {
+            color: var(--white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+        
+        .rating {
+            color: var(--accent-color);
+            margin-top: 5px;
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--white);
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-info h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-info p {
+            margin-bottom: 30px;
+        }
+        
+        .contact-details {
+            margin-bottom: 30px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item i {
+            font-size: 1.2rem;
+            color: var(--primary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+        
+        .contact-form input,
+        .contact-form textarea,
+        .contact-form select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .contact-form input:focus,
+        .contact-form textarea:focus,
+        .contact-form select:focus {
+            border-color: var(--primary-color);
+            outline: none;
+        }
+        
+        .contact-form textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+        
+        .footer-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-col h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+        
+        .footer-col ul {
+            list-style: none;
+        }
+        
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-col ul li a {
+            color: #bbb;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: var(--white);
+            transition: all 0.3s;
+        }
+        
+        .social-links a:hover {
+            background-color: var(--accent-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #bbb;
+        }
+        
+        .disclaimer {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 5px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .customer-satisfaction {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 40px;
+            text-align: center;
+        }
+        
+        .customer-satisfaction h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .satisfaction-stats {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--accent-color);
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .logo {
+                margin-bottom: 15px;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <div class="logo">
+                <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M50 10 L30 50 L70 50 Z" fill="#4a934a"/>
+                    <path d="M30 50 Q50 70 70 50" stroke="#4a934a" stroke-width="8" fill="none"/>
+                    <path d="M70 50 Q90 30 100 60" stroke="#4a934a" stroke-width="5" fill="none"/>
+                </svg>
+                <div class="logo-text">Vine<span>bud</span></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="privacy.html">Privacy</a></li>
+                    <li><a href="terms.html">Terms</a></li>
+                    <li><a href="cookies.html">Cookies</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Cultivate Your Perfect Green Space</h1>
+                <p>Vinebud brings professional gardening services to transform your outdoor areas into beautiful, thriving ecosystems.</p>
+                <a href="#contact" class="btn">Get a Free Quote</a>
+                <a href="#services" class="btn btn-accent">Our Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Vinebud</h2>
+                <p>We're dedicated to helping your green spaces reach their full potential, just like the earliest growth point of a vine symbolizes new beginnings and upward movement.</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Our Story</h3>
+                    <p>Founded in 2015, Vinebud started as a small team of passionate horticulturists with a vision to bring professional gardening services to urban homes and businesses in New York. Today, we've grown into one of the most trusted names in landscaping and garden maintenance.</p>
+                    <p>Our name reflects our philosophy - every plant starts as a small bud with immense potential. We see that same potential in every garden we work with, no matter its current state.</p>
+                    <p>With over 600 successful projects completed and thousands of satisfied customers, we combine expertise with genuine care for the environment to deliver exceptional results.</p>
+                    <a href="#contact" class="btn">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="p1.jpg" alt="Vinebud team working in a garden">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section services" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>We offer comprehensive gardening and landscaping services tailored to your specific needs and preferences.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="s1.webp" alt="Landscape Design">
+                    </div>
+                    <div class="service-content">
+                        <h3>Landscape Design</h3>
+                        <p>Our expert designers will create a customized landscape plan that complements your property's architecture and your personal style.</p>
+                        <div class="price">From $1,200</div>
+                        <a href="#contact" class="btn">Book Consultation</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="s2.webp" alt="Garden Maintenance">
+                    </div>
+                    <div class="service-content">
+                        <h3>Garden Maintenance</h3>
+                        <p>Regular care to keep your garden healthy and beautiful year-round, including pruning, weeding, fertilizing, and pest control.</p>
+                        <div class="price">From $150/month</div>
+                        <a href="#contact" class="btn">Schedule Service</a>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="s3.JPG" alt="Irrigation Systems">
+                    </div>
+                    <div class="service-content">
+                        <h3>Irrigation Systems</h3>
+                        <p>Smart watering solutions that conserve water while ensuring your plants get exactly what they need to thrive.</p>
+                        <div class="price">From $800</div>
+                        <a href="#contact" class="btn">Get Estimate</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="section pricing-section" id="pricing">
+        <div class="container">
+            <div class="section-title">
+                <h2>Service Packages</h2>
+                <p>We offer flexible pricing options to suit every budget and garden size.</p>
+            </div>
+            <div class="pricing-table">
+                <div class="pricing-card">
+                    <h3>Starter</h3>
+                    <div class="price">$150<span>/month</span></div>
+                    <ul>
+                        <li>Basic lawn mowing</li>
+                        <li>Hedge trimming</li>
+                        <li>Seasonal cleanup</li>
+                        <li>Monthly inspection</li>
+                        <li>Email support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+                <div class="pricing-card popular">
+                    <h3>Standard</h3>
+                    <div class="price">$350<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Starter</li>
+                        <li>Weekly maintenance</li>
+                        <li>Plant health monitoring</li>
+                        <li>Fertilization program</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="price">$650<span>/month</span></div>
+                    <ul>
+                        <li>Everything in Standard</li>
+                        <li>Daily maintenance</li>
+                        <li>Custom plant selection</li>
+                        <li>Soil analysis</li>
+                        <li>24/7 support</li>
+                    </ul>
+                    <a href="#contact" class="btn">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="section" id="blog">
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest From Our Blog</h2>
+                <p>Discover gardening tips, trends, and inspiration from our experts.</p>
+            </div>
+            <div class="blog-grid">
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="b1.webp" alt="Urban Gardening">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">June 15, 2023</div>
+                        <h3>Urban Gardening: Maximizing Small Spaces</h3>
+                        <p>Learn how to create a thriving garden even in the smallest urban spaces with these innovative techniques and plant selections.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="b2.webp" alt="Seasonal Plants">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">May 28, 2023</div>
+                        <h3>Best Plants for Summer Color in NYC</h3>
+                        <p>Discover the most vibrant and heat-resistant plants that will keep your garden colorful throughout the hot New York summer.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card">
+                    <div class="blog-image">
+                        <img src="b3.jpg" alt="Sustainable Gardening">
+                    </div>
+                    <div class="blog-content">
+                        <div class="blog-date">April 10, 2023</div>
+                        <h3>Sustainable Gardening Practices for 2023</h3>
+                        <p>Explore the latest eco-friendly gardening techniques that reduce water usage and promote biodiversity in your outdoor space.</p>
+                        <a href="#" class="read-more">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="#" class="btn">View All Blog Posts</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gardening Tips Section -->
+    <section class="section tips-section" id="tips">
+        <div class="container">
+            <div class="section-title">
+                <h2>Gardening Tips</h2>
+                <p>Expert advice to help you maintain a healthy and beautiful garden.</p>
+            </div>
+            <div class="tips-container">
+                <div class="tip-card">
+                    <h3><i class="fas fa-tint"></i> Watering Wisdom</h3>
+                    <p>Water plants in the early morning to reduce evaporation. Most plants prefer deep, infrequent watering rather than frequent shallow sprinklings. Check soil moisture by inserting your finger about an inch deep - if it's dry, it's time to water.</p>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-cut"></i> Pruning Properly</h3>
+                    <p>Always use sharp, clean tools to make clean cuts. Prune just above a bud facing the direction you want new growth to develop. Remove dead or diseased branches first, then shape the plant as desired.</p>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-seedling"></i> Soil Health</h3>
+                    <p>Healthy soil is the foundation of a thriving garden. Add organic matter like compost annually to improve soil structure and fertility. Test your soil every 2-3 years to monitor pH and nutrient levels.</p>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-bug"></i> Pest Control</h3>
+                    <p>Encourage beneficial insects by planting diverse species. Identify pests before treating - many can be controlled with organic methods like neem oil or insecticidal soap. Remove affected leaves promptly to prevent spread.</p>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-sun"></i> Seasonal Care</h3>
+                    <p>Adjust care with the seasons. Spring is for planting and fertilizing, summer for watering and pest control, fall for cleanup and bulb planting, winter for planning and protecting sensitive plants from cold.</p>
+                </div>
+                <div class="tip-card">
+                    <h3><i class="fas fa-tree"></i> Plant Selection</h3>
+                    <p>Choose plants suited to your specific conditions - sunlight, soil type, and climate. Native plants often require less maintenance and support local wildlife. Consider mature size to avoid overcrowding.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+                <p>Don't just take our word for it - hear from our satisfied customers.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Vinebud transformed our tiny backyard into a beautiful oasis. Their attention to detail and plant knowledge is incredible. We get compliments from all our neighbors!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/45.jpg" alt="Sarah J.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Sarah J.</h4>
+                            <p>West Village Resident</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The team at Vinebud has been maintaining our rooftop garden for two years now. They're reliable, professional, and our plants have never looked better. Worth every penny!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Michael T.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Michael T.</h4>
+                            <p>Chelsea Apartment</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a restaurant owner, our patio garden is crucial to our ambiance. Vinebud understands our needs perfectly and keeps our space looking impeccable year-round."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Elena R.">
+                        </div>
+                        <div class="author-info">
+                            <h4>Elena R.</h4>
+                            <p>SoHo Restaurant Owner</p>
+                            <div class="rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Get In Touch</h2>
+                <p>Ready to transform your outdoor space? Contact us for a free consultation.</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>We'd love to hear from you! Whether you have questions about our services or want to schedule a consultation, our team is here to help.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Address</h4>
+                                <p>239 Greene St, New York, NY 10003, USA</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>(212) 555-0198</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@vinebud.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Hours</h4>
+                                <p>Monday - Friday: 8am - 6pm<br>Saturday: 9am - 4pm<br>Sunday: Closed</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="design">Landscape Design</option>
+                                <option value="maintenance">Garden Maintenance</option>
+                                <option value="irrigation">Irrigation Systems</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Customer Satisfaction Section -->
+            <div class="customer-satisfaction">
+                <h3>Our Commitment to Customer Satisfaction</h3>
+                <p>At Vinebud, we measure our success by your happiness. Our team goes above and beyond to ensure every client is completely satisfied with our services.</p>
+                
+                <div class="satisfaction-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Client Retention Rate</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">4.9</div>
+                        <div class="stat-label">Average Rating (out of 5)</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">600+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Disclaimer Section -->
+            <div class="disclaimer">
+                <h4>Disclaimer</h4>
+                <p>The information provided on this website is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.</p>
+                <p>Prices listed are estimates only and may vary based on specific project requirements, location, and other factors. Actual services may differ from images shown. Always consult with a Vinebud professional for accurate assessments and quotes.</p>
+                <p>Vinebud is not responsible for any errors or omissions, or for the results obtained from the use of this information. Any reliance you place on such information is strictly at your own risk.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3>Vinebud</h3>
+                    <p>Cultivating beautiful, sustainable green spaces in New York City since 2015.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#">Landscape Design</a></li>
+                        <li><a href="#">Garden Maintenance</a></li>
+                        <li><a href="#">Irrigation Systems</a></li>
+                        <li><a href="#">Seasonal Planting</a></li>
+                        <li><a href="#">Tree Care</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Testimonials</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Gardening Tips</a></li>
+                        <li><a href="#">Plant Guide</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Vinebud Gardening Services. All Rights Reserved. | 239 Greene St, New York, NY 10003, USA</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple mobile menu toggle
+        document.querySelector('.mobile-menu').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('show');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
